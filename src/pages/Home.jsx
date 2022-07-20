@@ -1,13 +1,18 @@
+import { useNavigate } from "react-router-dom";
 
-
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleClickHome = () => {
+        navigate('/log-in');
+    }
 
     return (
         <div>
-            <NavBar />
-            <p>This is the home page</p>
+            <p>Personal surf journal</p>
+            <button onClick={handleClickHome}>Log In</button>
         </div>
     )
 }
