@@ -1,3 +1,4 @@
+import MyProvider from "./context/MyProvider";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from "./pages/Home";
@@ -8,13 +9,15 @@ import SurfLog from "./pages/SurfLog";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/log-in" element={<Login />} />
-      <Route path="/registration" element={<Registration />} />
-      <Route path="/surf-journal" element={<SurfJournal />} />
-      <Route path="/SurfLog" element={<SurfLog />} />
-    </Routes>
+    <MyProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/log-in" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/surf-journal" element={<SurfJournal />} />
+        <Route path="/SurfLog" element={<SurfLog />} />
+      </Routes>
+    </MyProvider>
   );
 }
 
