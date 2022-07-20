@@ -6,19 +6,23 @@ const Login = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
 
-    const handleClickLogin = () => {
-        navigate('/surf/journal');
-    }
-
     const handleClickReg = () => {
         navigate('/registration');
     }
 
+    const handleLogInSubmit = (event) => {
+        event.preventDefault();
+        navigate('/surf/journal');
+    }
+
     return (
         <div>
-            <p>This is the login component</p>
-            <p>Context: {context.test}</p>
-            <button onClick={handleClickLogin}>Log In</button>
+           <h1>Please Log In Below</h1>
+            <form onSubmit={handleLogInSubmit}>
+                <input value={context.user.email}  onChange={context.handleLogInChange} name="email" placeholder="email" />
+                <input value={context.user.password} onChange={context.handleLogInChange} name="password" placeholder="password" />
+                <input type="submit" value="Log In" />
+            </form>
             <button onClick={handleClickReg}>Sign Up</button>
         </div>
     )

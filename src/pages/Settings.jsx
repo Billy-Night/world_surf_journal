@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import NavBar from '../components/NavBar.jsx';
 
 const Settings = () => {
     const navigate = useNavigate();
@@ -9,6 +10,7 @@ const Settings = () => {
 
     return (
         <div>
+            <NavBar />
             <p>This is the settings page</p>
             <button onClick={handleSaveSettings}>Save</button>
         </div>
