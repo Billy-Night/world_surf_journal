@@ -4,7 +4,9 @@ export const MyContext = React.createContext();
 
 const MyProvider = (props) => {
 
-    let [ loggedIn, setLoggedIn ] = useState(false); 
+    let [ loggedIn, setLoggedIn ] = useState(false);
+    
+    let [ userId, setUserId ] = useState();
 
 //For the user log in
    let userBlank = {
@@ -32,10 +34,13 @@ const MyProvider = (props) => {
     return (
         <MyContext.Provider 
             value={{
+                userBlank: userBlank,
                 user: user,
                 handleUserDetailsChange: handleUserDetailsChange,
                 setLoggedIn: setLoggedIn,
                 loggedIn: loggedIn,
+                setUserId: setUserId,
+                userId: userId,
             }} >
             { props.children }
         </MyContext.Provider>

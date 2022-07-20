@@ -9,7 +9,25 @@ const Registration = () => {
 
     const handleSubmiteReg = (event) => {
         event.preventDefault();
-        navigate('/log-in');
+        fetch('http://localhost:3306/api/registration', {
+            method: "POST",
+            headers: new Headers({
+                'Content-Type': 'application/json',
+            }),
+            body: JSON.stringify({
+                first_name: context.user.first_name,
+                last_name: context.user.last_name,
+                email: context.user.email,
+                password: context.user.password
+            }),
+        }).then((res) => {
+            if (res.status === 201) {
+               navigate('/log-in'); 
+               context.setUser(context.userBlank);
+            } else {
+                console.log("There was an error registering a new user")
+            }
+        })
     };
 
     return (
