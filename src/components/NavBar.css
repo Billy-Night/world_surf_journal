@@ -1,11 +1,11 @@
 .top_navbar_container ul {
-    background-color: #2F3740;
+    background-color: #053057;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     color: white;
-    border-bottom: solid white 1px;
+    border-bottom: solid #FDD040 2px;
     padding: 10px;
     margin: 0px;
     list-style: none;
@@ -13,9 +13,8 @@
     font-size: 1.4em;
   }
   
-
-  /* .nav-bar li a {
+  .top_navbar_container li a {
     list-style: none;
     text-decoration: none;
     color: white;
-  } */
+  }
