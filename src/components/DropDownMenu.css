@@ -1,9 +1,18 @@
  
 .drop_down_menu_inner_container ul {
     list-style: none;   
+    background-color: #053057;
+    border-left: solid #FDD040 2px;
+    border-bottom: solid #FDD040 2px;
+    margin-top: 0px;
+    width: 200px;
+    height: fit-content;
+    position: absolute;
+    right: 0;
 }
 
-/* drop_down_menu_inner_container ul li a {
+.drop_down_menu_inner_container li a {
     list-style: none;
     text-decoration: none;
-} */
+    color: white;
+}
