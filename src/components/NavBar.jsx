@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenu from './DropDownMenu';
+import './NavBar.css';
 
 const NavBar = () => {
 
@@ -11,13 +12,17 @@ const NavBar = () => {
     }
 
     return (
-        <div>
-            <ul>
-                <li><Link to='/surf/journal'>Journal</Link></li>
-                <li><Link to='/surf/log'>Log</Link></li>
-                <li onClick={handleDropDownMenu}>Avatar</li>
-            </ul>
-            {showDropMenu ? <DropDownMenu /> : null }
+        <div className="navbar_container">
+            <div className="top_navbar_container">
+                <ul>
+                    <li><Link to='/surf/journal'>Journal</Link></li>
+                    <li><Link to='/surf/log'>Log</Link></li>
+                    <li onClick={handleDropDownMenu}>Avatar</li>
+                </ul>
+            </div>
+            <div className='drop_down_menu_container'>
+                {showDropMenu ? <DropDownMenu /> : null }
+            </div>
         </div>
     );
 };
