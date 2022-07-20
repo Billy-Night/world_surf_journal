@@ -7,7 +7,7 @@ const DropDownMenu = () => {
             <p>Drop down menu</p>
             <ul>
                 <li><Link to='/settings'>Settings</Link></li>
-                <li><Link to='/log-out'>Log Out</Link></li>
+                <li><Link to='/log-in'>Log Out</Link></li>
             </ul>
         </div>
     )
