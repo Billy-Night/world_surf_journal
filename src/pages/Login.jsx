@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MyContext } from "../context/MyProvider";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -19,11 +19,10 @@ const Login = () => {
 
     return (
         <div>
-            <NavBar />
            <h1>Please Log In Below</h1>
             <form onSubmit={handleLogInSubmit}>
-                <input value={context.user.email}  onChange={context.handleLogInChange} name="email" placeholder="email" />
-                <input value={context.user.password} onChange={context.handleLogInChange} name="password" placeholder="password" />
+                <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="email" />
+                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="password" />
                 <input type="submit" value="Log In" />
             </form>
             <button onClick={handleClickReg}>Sign Up</button>

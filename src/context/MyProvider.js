@@ -8,27 +8,32 @@ const MyProvider = (props) => {
 
 //For the user log in
    let userBlank = {
+        first_name: "",
+        last_name: "",
         email: "",
         password: "",
     };
 
     let [ user, setUser] = useState(userBlank);
 
-    const handleLogInChange = (event) => {
+    const handleUserDetailsChange = (event) => {
         const { name, value } = event.currentTarget;
 
         setUser({
             ...user, 
             [name]: value,
         });
-    }
+    };
+
+//For the user registration
+    
    
 
     return (
         <MyContext.Provider 
             value={{
                 user: user,
-                handleLogInChange: handleLogInChange,
+                handleUserDetailsChange: handleUserDetailsChange,
                 setLoggedIn: setLoggedIn,
                 loggedIn: loggedIn,
             }} >
