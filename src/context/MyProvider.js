@@ -8,7 +8,7 @@ const MyProvider = (props) => {
     
     let [ userId, setUserId ] = useState();
 
-//For the user log in
+//Handling the user information for registration and log in
    let userBlank = {
         first_name: "",
         last_name: "",
@@ -27,7 +27,29 @@ const MyProvider = (props) => {
         });
     };
 
-//For the user registration
+// Handling the journal submission
+
+    let tripLogBlank = {
+        where: "",
+        when: "",
+        who: "",
+        how: "",
+        rating: false,
+        notes: "",
+        gear: "",
+        quiver: "",
+    }
+
+    let [ tripLog, setTripLog ] = useState(tripLogBlank);
+
+    const handleTripLogChange = (event) => {
+        const { name, value } = event.currentTarget;
+        
+        setTripLog({
+            ...tripLog,
+            [name]: value,
+        });
+    };
     
    
 
@@ -42,6 +64,10 @@ const MyProvider = (props) => {
                 loggedIn: loggedIn,
                 setUserId: setUserId,
                 userId: userId,
+                tripLog: tripLog,
+                handleTripLogChange: handleTripLogChange,
+                setTripLog: setTripLog,
+                tripLogBlank: tripLogBlank,
             }} >
             { props.children }
         </MyContext.Provider>
