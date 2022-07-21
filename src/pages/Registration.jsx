@@ -22,8 +22,8 @@ const Registration = () => {
             }),
         }).then((res) => {
             if (res.status === 201) {
-               navigate('/log-in'); 
                context.setUser(context.userBlank);
+               navigate('/log-in'); 
             } else {
                 console.log("There was an error registering a new user")
             }

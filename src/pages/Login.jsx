@@ -13,9 +13,25 @@ const Login = () => {
 
     const handleLogInSubmit = (event) => {
         event.preventDefault();
-        navigate('/surf/journal');
-        context.setLoggedIn(true);
-    }
+        fetch('/api/log-in', {
+            method: "POST",
+            headers: new Headers({
+                'Content-Type' : 'application/json',
+            }),
+            body: JSON.stringify({
+                email: context.user.email,
+                password: context.user.password,
+            }),
+        }).then((res) => {
+            if (res.status === 200) {
+                context.setLoggedIn(true);
+                context.setUser(context.userBlank);
+                navigate('/surf/journal');
+            } else {
+                console.log("There was a problem logging in FE");
+            }
+        })
+    };
 
     return (
         <div>
