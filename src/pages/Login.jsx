@@ -13,7 +13,7 @@ const Login = () => {
 
     const handleLogInSubmit = (event) => {
         event.preventDefault();
-        fetch('/api/log-in', {
+        fetch('http://localhost:3306/api/log-in', {
             method: "POST",
             headers: new Headers({
                 'Content-Type' : 'application/json',
@@ -23,14 +23,17 @@ const Login = () => {
                 password: context.user.password,
             }),
         }).then((res) => {
-            if (res.status === 200) {
-                context.setLoggedIn(true);
+            if (res.status === 500) {
                 context.setUser(context.userBlank);
-                navigate('/surf/journal');
-            } else {
                 console.log("There was a problem logging in FE");
             }
-        })
+            return res.json();
+        }).then((data) => {
+            context.setLoggedIn(true);
+            context.setUser(context.userBlank);
+            context.setUserId(data.id);
+            navigate('/surf/journal');
+        });
     };
 
     return (
