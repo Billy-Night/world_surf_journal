@@ -34,10 +34,12 @@ const MyProvider = (props) => {
         when: "",
         who: "",
         how: "",
-        rating: false,
+        rating: 0,
         notes: "",
         gear: "",
         quiver: "",
+        duration: 0,
+        user_id: null,
     }
 
     let [ tripLog, setTripLog ] = useState(tripLogBlank);
