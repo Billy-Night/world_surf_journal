@@ -36,6 +36,7 @@ const MyProvider = (props) => {
             value={{
                 userBlank: userBlank,
                 user: user,
+                setUser: setUser,
                 handleUserDetailsChange: handleUserDetailsChange,
                 setLoggedIn: setLoggedIn,
                 loggedIn: loggedIn,
