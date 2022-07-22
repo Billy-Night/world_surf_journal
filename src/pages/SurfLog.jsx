@@ -4,11 +4,13 @@ import NavBar from "../components/NavBar";
 import './SurfLog.css';
 import TripCard from '../components/TripCard';
 import ExpandedTripCard from '../components/ExpandedTripCard';
+// import useMediaQuery from '../hooks/useMediaQuery';
 
 
 const SurfLog = () => {
     const context = useContext(MyContext);
-
+    // const isDesktop = useMediaQuery('(min-width: 960px)');
+    
     let [ trips, setTrips ] = useState();
 
     let [ selectedTripId, setSelectedTripId ] = useState();

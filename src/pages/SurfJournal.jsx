@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import { MyContext } from "../context/MyProvider";
 import './SurfJournal.css';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const SurfJournal = () => {
     const context = useContext(MyContext);
     const navigate = useNavigate();
+
+    const isDesktop = useMediaQuery('(min-width: 960px)');
 
     let quiver = ["Grooveler", "Fish", "Shortboard", "Malibu", "Longboard"];
     let rating = [5, 4, 3, 2, 1];
@@ -83,7 +86,7 @@ const SurfJournal = () => {
         <div className="sj_main">
             <NavBar />
             <div className='sj_main_container'>
-                <div className='sj_form_container'>
+                <div className={`sj_form_container_${isDesktop ? "desk" : "mobile"}`}>
                     <div className='sj_inner_form_container'>
                         <h2>Surf Journal</h2>
                         {context.updateTrip ? <p>Please update your trip</p> : <p>Please add you last trip</p> }

@@ -37,6 +37,8 @@
 }
 
 .individual_trip_card_btn {
+    font-family: inherit;
+    font-weight: 600;
     display: inline-block;
     outline: 0;
     appearance: none;
@@ -49,7 +51,6 @@
     box-shadow: rgb(5, 48, 87 / 30%) 0px 1px 2px;
     color: rgb(61, 79, 88);
     font-size: 14px;
-    font-weight: 400;
     height: 36px;
     transition: all 150ms ease-in-out 0s;
 }

@@ -20,15 +20,59 @@
 }
 
 .home_details_container {
-    position: absolute;
-    bottom: 15%;
-    height: 100px;
-    width: 100vh;
+    width: 300px;
     text-align: center;
+}
+
+.home_details_container_wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .home_details_container p {
     color: #A38C13;
     font-size: 20px;
     font-weight: 500;
+}
+
+.home_btn_container {
+    text-align: center;
+    margin: 4% 2% 4% 2%;
+    padding: 2px;
+}
+
+.home_btn {
+    font-family: inherit;
+    max-width: 150px;
+    display: inline-block;
+    outline: 0;
+    appearance: none;
+    padding: 0px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(249, 251, 250);
+    border: 1px solid rgb(137, 151, 155);
+    box-shadow: rgb(5, 48, 87 / 30%) 0px 1px 2px;
+    color: rgb(61, 79, 88);
+    font-size: 14px;
+    font-weight: 400;
+    height: 36px;
+    transition: all 150ms ease-in-out 0s;
+}
+
+.home_btn:hover {
+    color: rgb(61, 79, 88);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(93, 108, 116);
+    box-shadow: rgb(5, 48, 87 / 30%) 0px 4px 4px, #053057 0px 0px 0px 1px;
+}
+
+.home_btn:hover {
+    box-shadow: 4px 4px 0 #053057;
+    transform: translate(-4px,-4px);
+}
+
+.home_btn:focus-visible{
+    outline-offset: 1px;
 }

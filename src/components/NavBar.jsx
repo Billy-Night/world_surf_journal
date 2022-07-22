@@ -18,7 +18,7 @@ const NavBar = () => {
             <div className="top_navbar_container">
                     <ul>
                         <li><Link to='/surf/journal'>Journal</Link></li>
-                        <li><Link to='/surf/log'>Log</Link></li>
+                        <li><Link to='/surf/log'>Trips</Link></li>
                         <li onClick={handleDropDownMenu}>Avatar</li>
                     </ul>
             </div>

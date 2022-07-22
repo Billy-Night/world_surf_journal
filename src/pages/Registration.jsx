@@ -24,7 +24,7 @@ const Registration = () => {
         }).then((res) => {
             if (res.status === 201) {
                context.setUser(context.userBlank);
-               navigate('/log-in'); 
+               navigate('/'); 
             } else {
                 console.log("There was an error registering a new user")
             }
@@ -38,7 +38,7 @@ const Registration = () => {
                 <div className="registration_form_container">
                     <div className="registration_inner_form_container">
                         <h2>Please Sign Up</h2>
-                        <p>This is reg</p>
+                        <p>Register Below</p>
                         <div className='registration_form'>
                             <form onSubmit={handleSubmiteReg}>
                                 <label htmlFor="first_name">First Name:</label>

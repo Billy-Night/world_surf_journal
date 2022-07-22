@@ -3,10 +3,12 @@ import { MyContext } from "../context/MyProvider";
 import { useNavigate } from "react-router-dom";
 // import NavBar from "../components/NavBar";
 import './Login.css';
+import useMediaQuery from "../hooks/useMediaQuery.jsx";
 
 const Login = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
+    const isDesktop = useMediaQuery('(min-width: 960px)');
 
     const handleClickReg = (event) => {
         event.preventDefault();
@@ -41,7 +43,8 @@ const Login = () => {
     return (
         <div className="login_main">
             <div className="space"></div>
-            <div className="login_main_container">
+
+            <div className={`login_main_container_${isDesktop ? "desk" : "mobile"}`}>
                 <div className="login_form_container">
                     <div className="login_inner_form_container">
                         <h2>Welcome</h2>
@@ -49,9 +52,9 @@ const Login = () => {
                         <div className="login_form">
                         <form onSubmit={handleLogInSubmit}>
                             <label htmlFor="email" name="email">Email:</label>
-                            <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="email" />
+                            <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="Enter email" />
                             <label htmlFor="password">Password:</label>
-                            <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="password" />
+                            <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="Enter password" />
                             <div className="login_form_btn_container">
                                 <input className='login_form_btn' type="submit" value="Log In" />
                                 <button className='login_form_btn' onClick={handleClickReg}>Sign Up</button>

@@ -9,14 +9,32 @@
        url('https://images.unsplash.com/photo-1571690584414-fa2a1127a2e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
     color: white;
     margin: 0px;
-    height: 140vh;
+    height: 160vh;
   }
 
-.sj_main_container {
+.sj_form_container_ {
     margin: auto 20% auto 20%;
+}
+
+.sj_form_container_desk {
+    margin: auto 20% auto 20%;
+    margin-top: 4%;
+    padding: 4px;
+    border: solid 1px #053057;
+    border-radius: 20px;
+    background-color: rgb(76, 154, 224, 0.6);
+}
+
+.sj_form_container_mobile {
+    margin: auto 10% auto 10%;
+    margin-top: 4%;
+    padding: 4px;
+    border: solid 1px #053057;
+    border-radius: 20px;
+    background-color: rgb(76, 154, 224, 0.6);
+    min-width: 300px;
 }
 
 .sj_inner_form_container h2 {
@@ -26,14 +44,6 @@
 
 .sj_inner_form_container p {
     text-align: center;
-}
-
-.sj_form_container {
-    margin-top: 4%;
-    padding: 4px;
-    border: solid 1px #053057;
-    border-radius: 20px;
-    background-color: rgb(76, 154, 224, 0.6);
 }
 
 .sj_inner_form_container {
@@ -57,6 +67,7 @@
     /* background: rgb(65, 146, 248, 0.5); */
     width: 100%;
     padding: 5px;
+    font-family: inherit;
 }
 .sj_form_quiver_section {
     margin-bottom: 5%;
@@ -113,9 +124,12 @@
 .sj_form_btn_container {
     text-align: center;
     margin-bottom: 4%;
+    margin-top: 2%;
 }
 
 .sj_form_btn {
+    font-family: inherit;
+    font-weight: 600;
     max-width: 150px;
     display: inline-block;
     outline: 0;
@@ -129,7 +143,6 @@
     box-shadow: rgb(5, 48, 87 / 30%) 0px 1px 2px;
     color: rgb(61, 79, 88);
     font-size: 14px;
-    font-weight: 400;
     height: 36px;
     transition: all 150ms ease-in-out 0s;
 }

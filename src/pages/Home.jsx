@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import './Home.css';
+
 // import logo1 from '../assets/logo1.png'
 
 // import NavBar from "../components/NavBar";
@@ -8,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleClickHome = () => {
-        navigate('/log-in');
+        navigate('/');
     }
 
     return (
@@ -17,9 +18,13 @@ const Home = () => {
                 <div className="home_image_container">
                 </div>
             </div>
-            <div className="home_details_container">
-                <p>Personal surf journal</p>
-                <button onClick={handleClickHome}>Log In</button>
+            <div className="home_details_container_wrapper">
+                <div className="home_details_container">
+                    <p>Personal surf journal</p>
+                    <div className="home_btn_container">
+                        <button className='home_btn' onClick={handleClickHome}>Log In</button>
+                    </div>
+                </div>
             </div>
         </div>
     )
