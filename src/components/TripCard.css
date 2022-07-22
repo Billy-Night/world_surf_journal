@@ -2,7 +2,7 @@
 .individual_trip_card {
     margin: 2%;
     width: 200px;
-    height: 200px;
+    height: 250px;
     border: solid 2px #053057;
     border-radius: 10%;
 }
@@ -33,7 +33,7 @@
 .individual_trip_card_btn_container {
     display: flex;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 12%;
 }
 
 .individual_trip_card_btn {

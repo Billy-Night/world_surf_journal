@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleClickHome = () => {
-        navigate('/');
+        navigate('/log/in');
     }
 
     return (

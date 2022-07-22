@@ -70,6 +70,8 @@
 }
 
 .login_form_btn {
+    /* margin-bottom: 2%; */
+    margin: 2%;
     font-family: inherit;
     max-width: 150px;
     display: inline-block;

@@ -12,8 +12,8 @@ function App() {
   return (
     <MyProvider>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/log/in" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/surf/journal" element={<SurfJournal />} />
         <Route path="/surf/log" element={<SurfLog />} />
