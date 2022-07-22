@@ -5,9 +5,11 @@ import DropDownMenu from './DropDownMenu';
 import './NavBar.css';
 import avatar from '../assets/avatar.png';
 import logo1 from '../assets/logo1.png';
+import useMediaQuery from "../hooks/useMediaQuery.jsx";
 
 const NavBar = () => {
     // const context = useContext(MyContext);
+    const isDesktop = useMediaQuery('(min-width: 960px)');
     const navigate = useNavigate();
 
     let [ showDropMenu, setshowDropMenu] = useState(false);
@@ -25,8 +27,12 @@ const NavBar = () => {
             <div className="top_navbar_container">
                     <ul>
                         <img onClick={handleLogoClick} src={logo1} alt="logo"/>
+                        {isDesktop ?
+                        <>
                         <li><Link to='/surf/journal'>Journal</Link></li>
                         <li><Link to='/surf/log'>Trips</Link></li>
+                        </> 
+                        : null }
                         <img onClick={handleDropDownMenu} src={avatar} alt="avatar"/>
                     </ul>  
             </div>

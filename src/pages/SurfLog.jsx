@@ -13,7 +13,7 @@ const SurfLog = () => {
     
     let [ trips, setTrips ] = useState();
 
-    let [ selectedTripId, setSelectedTripId ] = useState();
+    // let [ selectedTripId, setSelectedTripId ] = useState();
     let [ selectedTripIndex, setSelectedTripIndex ] = useState();
     let [ showExpandedCard, setShowExpandedCard ]= useState(false);
 
@@ -30,7 +30,7 @@ const SurfLog = () => {
 
     const handleClickViewMoreTripSelected = (id) => {
         // console.log(id);
-        setSelectedTripId(id);
+        // setSelectedTripId(id);
         let index = trips.findIndex((e) => e.id === id);
         // console.log(index);
         setSelectedTripIndex(index);
