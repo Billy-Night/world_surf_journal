@@ -1,0 +1,8 @@
+
+.log_page_container {
+    margin: 2% 10% 0% 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

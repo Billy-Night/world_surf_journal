@@ -14,7 +14,7 @@ const DropDownMenu = () => {
         <div className='drop_down_menu_inner_container'>
             <ul>
                 <li><Link to='/settings'>Settings</Link></li>
-                <li><Link to='/log-in' onClick={handleClickSignOut} >Log Out</Link></li>
+                <li><Link to='/' onClick={handleClickSignOut} >Log Out</Link></li>
             </ul>
         </div>
     )

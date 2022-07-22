@@ -1,0 +1,101 @@
+
+.login_main {
+    background-image:
+        linear-gradient(
+        115deg,
+        rgba(99, 116, 138, 0.5),
+        rgba(64, 75, 89, 0.4)
+      ),
+       url('https://images.unsplash.com/photo-1571690584414-fa2a1127a2e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0px;
+    height: 120vh;
+  }
+
+.space {
+    height: 10%;
+}
+
+.login_main_container {
+    margin: 10% 20% auto 20%;
+}
+
+.login_form_container {
+    margin-top: 0px;
+    padding: 4px;
+    border: solid 1px #053057;
+    border-radius: 20px;
+    background-color: rgb(76, 154, 224, 0.6);
+}
+
+.login_inner_form_container h2 {
+    text-align: center;
+    margin: 3px auto 3px auto;
+}
+
+.login_inner_form_container p {
+    text-align: center;
+}
+
+.login_inner_form_container {
+    /* background-color: rgb(5, 48, 87, 0.2); */
+    margin: 0% 10% 0 10%;  
+}
+
+.login_form {
+    margin: 0% 15% 0% 15%;
+}
+
+.login_form form label {
+    display: block;
+    margin: 1% auto 1% auto;
+}
+
+.login_form input {
+    width: 100%;
+    padding: 4px;
+}
+
+.login_form_btn_container {
+    text-align: center;
+    margin: 4% 2% 4% 2%;
+    padding: 2px;
+}
+
+.login_form_btn {
+    max-width: 150px;
+    display: inline-block;
+    outline: 0;
+    appearance: none;
+    padding: 0px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(249, 251, 250);
+    border: 1px solid rgb(137, 151, 155);
+    box-shadow: rgb(5, 48, 87 / 30%) 0px 1px 2px;
+    color: rgb(61, 79, 88);
+    font-size: 14px;
+    font-weight: 400;
+    height: 36px;
+    transition: all 150ms ease-in-out 0s;
+}
+
+.login_form_btn:hover {
+    color: rgb(61, 79, 88);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(93, 108, 116);
+    box-shadow: rgb(5, 48, 87 / 30%) 0px 4px 4px, #053057 0px 0px 0px 1px;
+}
+
+.login_form_btn:hover {
+    box-shadow: 4px 4px 0 #053057;
+    transform: translate(-4px,-4px);
+}
+
+.login_form_btn:focus-visible{
+    outline-offset: 1px;
+}

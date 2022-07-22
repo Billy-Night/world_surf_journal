@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import { MyContext } from "../context/MyProvider";
 import { useNavigate } from "react-router-dom";
 // import NavBar from "../components/NavBar";
+import './Login.css';
 
 const Login = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
 
-    const handleClickReg = () => {
+    const handleClickReg = (event) => {
+        event.preventDefault();
         navigate('/registration');
     }
 
@@ -37,14 +39,28 @@ const Login = () => {
     };
 
     return (
-        <div>
-           <h1>Please Log In Below</h1>
-            <form onSubmit={handleLogInSubmit}>
-                <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="email" />
-                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="password" />
-                <input type="submit" value="Log In" />
-            </form>
-            <button onClick={handleClickReg}>Sign Up</button>
+        <div className="login_main">
+            <div className="space"></div>
+            <div className="login_main_container">
+                <div className="login_form_container">
+                    <div className="login_inner_form_container">
+                        <h2>Welcome</h2>
+                        <p>Please Log In</p>
+                        <div className="login_form">
+                        <form onSubmit={handleLogInSubmit}>
+                            <label htmlFor="email" name="email">Email:</label>
+                            <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="email" />
+                            <label htmlFor="password">Password:</label>
+                            <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="password" />
+                            <div className="login_form_btn_container">
+                                <input className='login_form_btn' type="submit" value="Log In" />
+                                <button className='login_form_btn' onClick={handleClickReg}>Sign Up</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+              </div> 
         </div>
     )
 }

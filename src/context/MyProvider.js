@@ -30,6 +30,8 @@ const MyProvider = (props) => {
 // Handling the journal submission
 
     let tripLogBlank = {
+        title: "",
+        image: "",
         where: "",
         when: "",
         who: "",
@@ -52,6 +54,9 @@ const MyProvider = (props) => {
             [name]: value,
         });
     };
+
+// Handling trip update 
+    let [ updateTrip, setUpdatetrip ] = useState(false); 
     
    
 
@@ -70,6 +75,9 @@ const MyProvider = (props) => {
                 handleTripLogChange: handleTripLogChange,
                 setTripLog: setTripLog,
                 tripLogBlank: tripLogBlank,
+                updateTrip: updateTrip,
+                setUpdatetrip, setUpdatetrip,
+
             }} >
             { props.children }
         </MyContext.Provider>
