@@ -16,7 +16,7 @@ const SurfJournal = () => {
 
     const handleSubmitJournal = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3306/api/trip/log', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trip/log`, {
             method: "POST",
             headers: new Headers({
                 'Content-Type':'application/json',
@@ -49,7 +49,7 @@ const SurfJournal = () => {
 
     const handleSubmitJournalUpdate = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3306/api/trip/log/update', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trip/log/update`, {
             method: "PUT",
             headers: new Headers({
                 'Content-Type':'application/json',

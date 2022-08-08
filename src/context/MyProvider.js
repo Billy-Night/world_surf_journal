@@ -76,8 +76,7 @@ const MyProvider = (props) => {
                 setTripLog: setTripLog,
                 tripLogBlank: tripLogBlank,
                 updateTrip: updateTrip,
-                setUpdatetrip, setUpdatetrip,
-
+                setUpdatetrip: setUpdatetrip
             }} >
             { props.children }
         </MyContext.Provider>

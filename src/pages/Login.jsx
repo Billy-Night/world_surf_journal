@@ -17,7 +17,7 @@ const Login = () => {
 
     const handleLogInSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3306/api/log-in', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/log-in`, {
             method: "POST",
             headers: new Headers({
                 'Content-Type' : 'application/json',

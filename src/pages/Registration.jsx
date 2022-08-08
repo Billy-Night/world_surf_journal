@@ -10,7 +10,7 @@ const Registration = () => {
 
     const handleSubmiteReg = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3306/api/registration', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/registration`, {
             method: "POST",
             headers: new Headers({
                 'Content-Type': 'application/json',

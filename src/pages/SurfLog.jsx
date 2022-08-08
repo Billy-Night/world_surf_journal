@@ -20,7 +20,7 @@ const SurfLog = () => {
     let id = context.userId;
 
     useEffect(() => {
-        fetch(`http://localhost:3306/api/trips/${id}`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trips/${id}`)
         .then((res) => res.json())
         .then((data) => {
             setTrips(data);
