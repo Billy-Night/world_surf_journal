@@ -43,7 +43,6 @@ const Login = () => {
     return (
         <div className="login_main">
             <div className="space"></div>
-
             <div className={`login_main_container_${isDesktop ? "desk" : "mobile"}`}>
                 <div className="login_form_container">
                     <div className="login_inner_form_container">

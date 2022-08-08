@@ -20,7 +20,7 @@ const Home = () => {
             </div>
             <div className="home_details_container_wrapper">
                 <div className="home_details_container">
-                    <p>Personal surf journal</p>
+                    <p><i>"Record you next adventure"</i></p>
                     <div className="home_btn_container">
                         <button className='home_btn' onClick={handleClickHome}>Log In</button>
                     </div>
