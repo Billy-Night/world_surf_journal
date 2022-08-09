@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MyContext } from "../context/MyProvider";
 import { useNavigate } from "react-router-dom";
 // import NavBar from "../components/NavBar";
@@ -9,6 +9,8 @@ const Login = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
     const isDesktop = useMediaQuery('(min-width: 960px)');
+
+    let [ errorPassword, setErrorPassword ] =  useState(false);
 
     const handleClickReg = (event) => {
         event.preventDefault();
@@ -30,12 +32,14 @@ const Login = () => {
             if (res.status === 500) {
                 context.setUser(context.userBlank);
                 console.log("There was a problem logging in FE");
+                setErrorPassword(true);
             }
             return res.json();
         }).then((data) => {
             context.setLoggedIn(true);
             context.setUser(context.userBlank);
             context.setUserId(data.id);
+            setErrorPassword(false);
             navigate('/surf/journal');
         });
     };
@@ -60,6 +64,10 @@ const Login = () => {
                             </div>
                         </form>
                         </div>
+                        {errorPassword ?
+                        <> 
+                            <p>WRONG PASSWORD</p>
+                        </> : null }
                     </div>
                 </div>
               </div> 
