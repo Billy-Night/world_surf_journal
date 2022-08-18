@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# World Surf Journal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ *Save your next surf adventure...*
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+The world surf journal is a web application that allows the user to register an account and save their surf trips with various details and rating. 
 
-### `npm start`
+## Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [World Surf Journal](#world-surf-journal)
+  - [Introduction](#introduction)
+  - [Contents](#contents)
+  - [Main Features](#main-features)
+  - [Project Status](#project-status)
+  - [Future Development](#future-development)
+  - [Deployment](#deployment)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+  - [Contribution](#contribution)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Main Features 
+Some of the main features of this project are:
+ - The ability for the user to register a new account.
+ - The ability for the user to securely sign into their account.
+ - The ability for the user to log out securely.
+ - The ability for the user to add a surf trip and save it to their account.
+ - The ability for the user to view all their trips in an easy accessible dashboard.
+ - The ability to expand each trip within the dashboard and view extra information about their trip.
+ - The ability for the user to edit a trip.
 
-### `npm test`
+## Project Status 
+The project was completed and handed in within the time frame allocated by the school, the project meet all requested requirements.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project was the final checkpoint of the web development course and it was created over the course of three days.
 
-### `npm run build`
+I would like to continue working on the project into the future.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Development
+Some of the main features to add in the future are :
+ - The ability for the user to delete their trips.
+ - The ability for the user to update their profile.
+ - The ability for the user to upload an image to their trip.
+ - The ability for the user to view all their trips on a aesthetically pleasing map, with expandable icons etc...
+ - The ability for the user to order a physical map of their trips.
+ - The ability for the user to share their trips on other social media platforms.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The above list is a few of the main future developments.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
+The project has been deployed and is fully functional, but is currently on a free plan on railway:
+ - `https://railway.app/`
 
-### `npm run eject`
+The deployed version consists of a frontend, backend and database. It can be found at the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `https://worldsurfjournal-production.up.railway.app/`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To develope the World Surf Journal fullstack application the following technologies were used:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - Frontend
+   - CSS, JavaScript, React
+ - Backend
+   - Node.js, Express
+ - Database
+   - MySQL
 
-## Learn More
+## Installation 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project was created using React for the frontend and Node.js for the backend.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+It can be set-up by the following 
 
-### Code Splitting
+ - First:
+    - ``` git clone ```
+    - ``` git@github.com:Billy-Night/world_surf_journal.git ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - Second: 
+    - ``` npm install ```
 
-### Analyzing the Bundle Size
+> This will install all the dependencies.
+  - Third:
+    - ``` npm start ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> This will launch the frontend, but it still needs to be connected to the backend, which can be found at the following:
+  - Fourth:
+    - `git@github.com:Billy-Night/world_surf_journal_backend.git`
 
-### Making a Progressive Web App
+After this the backend will need to be connected to the database, the database script can be found within the backend folder as the following: `wsj_db.sql` .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution
+If you have any questions please contact the creator at :
+`https://github.com/Billy-Night`
