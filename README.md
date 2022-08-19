@@ -1,10 +1,12 @@
 # World Surf Journal
 
-<img src="https://github.com/Billy-Night/world_surf_journal/blob/main/src/assets/logo1.png" alt="world surf logo" />
+<p align="center">
+ <img src="https://github.com/Billy-Night/world_surf_journal/blob/main/src/assets/logo1.png" alt="world surf logo" />
+</p>
 
  *Save your next surf adventure...*
  
- <p>
+ <p align="center">
   <a href="https://world-surf-journal-api.up.railway.app/">Demo</a> . 
   <a href="https://github.com/Billy-Night/world_surf_journal/issues">Report Bug</a>
  </p>
