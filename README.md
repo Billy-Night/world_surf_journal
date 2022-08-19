@@ -13,7 +13,7 @@
 
 ## Introduction
 
-The world surf journal is a web application that allows the user to register an account and save their surf trips with various details and rating. 
+The world surf journal is a web application that allows the user to register an account and save their surf trips with various details and rating. It was carried out over the course of three days and part of the final checkpoint while enrolled on a Web Development course at the Wild Code School. It is a fullstack application and consists of a frontend, backend and database. 
 
 ## Contents
 
@@ -101,3 +101,5 @@ After this the backend will need to be connected to the database, the database s
 ## Contribution
 If you have any questions please contact the creator at :
 `https://github.com/Billy-Night`
+
+[<img src='https://cdn-icons.flaticon.com/png/512/3256/premium/3256013.png?token=exp=1660905726~hmac=f1492410e8ac5d2f4610d2fe10102cf0' alt='twitter' height='40'>](https://twitter.com/billymnighting1)
