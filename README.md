@@ -99,7 +99,7 @@ It can be set-up by the following
 After this the backend will need to be connected to the database, the database script can be found within the backend folder as the following: `wsj_db.sql` .
 
 ## Contribution
-If you have any questions please contact the creator at :
+If you have any questions please contact the creator at:
 `https://github.com/Billy-Night`
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/Billy-Night)  [<img src='https://static-exp1.licdn.com/sc/h/9wzc6pgtn06j7dubaufd5wbwv' alt='linkedin' height='40'>](https://www.linkedin.com/in/billynightingale)
