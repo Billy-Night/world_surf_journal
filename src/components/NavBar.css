@@ -13,6 +13,19 @@
     width: 100px;
   }
 
+  .top_navbar_container-logo-btn {
+    margin-left: 2%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-image: 
+      url('../assets/siteLogo.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 60px;
+      width: 60px;
+  }
+
   .top_navbar_container ul {
     margin: 0px;
     padding: 0px;

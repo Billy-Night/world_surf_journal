@@ -11,6 +11,7 @@ const Login = () => {
     const isDesktop = useMediaQuery('(min-width: 960px)');
 
     let [ errorPassword, setErrorPassword ] =  useState(false);
+    let [ errorEmail, setErrorEmail ] = useState(false);
 
     const handleClickReg = (event) => {
         event.preventDefault();
@@ -29,9 +30,14 @@ const Login = () => {
                 password: context.user.password,
             }),
         }).then((res) => {
+            if (res.status === 404) {
+                context.setUser(context.userBlank);
+                console.log("There was a problem logging in FE EMAIL!");
+                setErrorEmail(true);
+            }
             if (res.status === 500) {
                 context.setUser(context.userBlank);
-                console.log("There was a problem logging in FE");
+                console.log("There was a problem logging in FE PASSWORD!");
                 setErrorPassword(true);
             }
             return res.json();
@@ -55,15 +61,19 @@ const Login = () => {
                         <div className="login_form">
                         <form onSubmit={handleLogInSubmit}>
                             <label htmlFor="email" name="email">Email:</label>
-                            <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="Enter email" />
+                            <input value={context.user.email}  onChange={context.handleUserDetailsChange} name="email" placeholder="Enter email" type="email" required/>
                             <label htmlFor="password">Password:</label>
-                            <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="Enter password" />
+                            <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder="Enter password" type="password" required/>
                             <div className="login_form_btn_container">
                                 <input className='login_form_btn' type="submit" value="Log In" />
                                 <button className='login_form_btn' onClick={handleClickReg}>Sign Up</button>
                             </div>
                         </form>
                         </div>
+                        {errorEmail ? 
+                        <>
+                            <p>Email Not Found</p>
+                        </> : null }
                         {errorPassword ?
                         <> 
                             <p>WRONG PASSWORD</p>

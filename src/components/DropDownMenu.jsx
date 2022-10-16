@@ -10,6 +10,7 @@ const DropDownMenu = () => {
 
    const handleClickSignOut = () => {
         context.setLoggedIn(false);
+        context.setUserId(null);
    }
 
     return (

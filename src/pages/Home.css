@@ -11,12 +11,13 @@
 }
 
 .home_image_container {
+    margin-top: 8%;
     background-image:
-       url('../assets/logo1.png');
+       url('../assets/siteLogo.svg');
        background-repeat: no-repeat;
        background-size: contain;
-       height: 500px;
-       width: 400px;
+       height: 400px;
+       width: 200px;
 }
 
 .home_details_container {

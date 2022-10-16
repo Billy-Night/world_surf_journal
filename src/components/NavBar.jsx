@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import DropDownMenu from './DropDownMenu';
 import './NavBar.css';
 import avatar from '../assets/avatar.png';
-import logo1 from '../assets/logo1.png';
+// import { ReactComponent as Logo} from '../assets/siteLogo.svg';
 import useMediaQuery from "../hooks/useMediaQuery.jsx";
 
 const NavBar = () => {
@@ -26,7 +26,7 @@ const NavBar = () => {
         <div className="navbar_container">
             <div className="top_navbar_container">
                     <ul>
-                        <img onClick={handleLogoClick} src={logo1} alt="logo"/>
+                        <div className='top_navbar_container-logo-btn' onClick={handleLogoClick} ></div>
                         {isDesktop ?
                         <>
                         <li><Link to='/surf/journal'>Journal</Link></li>

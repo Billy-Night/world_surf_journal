@@ -8,7 +8,7 @@ const Registration = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
 
-    const handleSubmiteReg = (event) => {
+    const handleSubmitReg = (event) => {
         event.preventDefault();
         fetch(`${process.env.REACT_APP_BACKEND_URL}/api/registration`, {
             method: "POST",
@@ -40,15 +40,15 @@ const Registration = () => {
                         <h2>Please Sign Up</h2>
                         <p>Register Below</p>
                         <div className='registration_form'>
-                            <form onSubmit={handleSubmiteReg}>
+                            <form onSubmit={handleSubmitReg}>
                                 <label htmlFor="first_name">First Name:</label>
-                                <input value={context.user.first_name} onChange={context.handleUserDetailsChange} name="first_name" placeholder='First Name'/>
+                                <input value={context.user.first_name} onChange={context.handleUserDetailsChange} name="first_name" placeholder='First Name' required/>
                                 <label htmlFor="last_name">Last Name:</label>
-                                <input value={context.user.last_name} onChange={context.handleUserDetailsChange} name="last_name" placeholder='Last Name'/>
+                                <input value={context.user.last_name} onChange={context.handleUserDetailsChange} name="last_name" placeholder='Last Name' required/>
                                 <label htmlFor="email">Email:</label>
-                                <input value={context.user.email} onChange={context.handleUserDetailsChange} name="email" placeholder='email'/>
+                                <input value={context.user.email} onChange={context.handleUserDetailsChange} name="email" placeholder='email' type="email" required/>
                                 <label htmlFor="password">Password:</label>
-                                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder='password'/>
+                                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder='password' required/>
                                 <div className="registration_form_btn_container">
                                 <input className='registration_form_btn' type="submit" value="Sign Up"/>
                                 </div>
