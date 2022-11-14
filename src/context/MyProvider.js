@@ -44,6 +44,8 @@ const MyProvider = (props) => {
         user_id: null,
     }
 
+   
+
     let [ tripLog, setTripLog ] = useState(tripLogBlank);
 
     const handleTripLogChange = (event) => {
@@ -58,6 +60,11 @@ const MyProvider = (props) => {
 // Handling trip update 
     let [ updateTrip, setUpdatetrip ] = useState(false); 
     
+    //! Handling selected trip this is the index used for displaying the trips as cards once the data has been recieved
+    let [ selectedTripIndex, setSelectedTripIndex ] = useState();
+
+    //Handle selected trip id 
+    let [ selectedTripId, setSelectedTripId ] = useState();
    
 
     return (
@@ -76,7 +83,11 @@ const MyProvider = (props) => {
                 setTripLog: setTripLog,
                 tripLogBlank: tripLogBlank,
                 updateTrip: updateTrip,
-                setUpdatetrip: setUpdatetrip
+                setUpdatetrip: setUpdatetrip,
+                setSelectedTripIndex: setSelectedTripIndex,
+                selectedTripIndex: selectedTripIndex,
+                setSelectedTripId: setSelectedTripId,
+                selectedTripId: selectedTripId
             }} >
             { props.children }
         </MyContext.Provider>

@@ -42,13 +42,17 @@ const Registration = () => {
                         <div className='registration_form'>
                             <form onSubmit={handleSubmitReg}>
                                 <label htmlFor="first_name">First Name:</label>
-                                <input value={context.user.first_name} onChange={context.handleUserDetailsChange} name="first_name" placeholder='First Name' required/>
+                                <input value={context.user.first_name} onChange={context.handleUserDetailsChange} type="text" name="first_name" placeholder='First Name' required/>
+
                                 <label htmlFor="last_name">Last Name:</label>
-                                <input value={context.user.last_name} onChange={context.handleUserDetailsChange} name="last_name" placeholder='Last Name' required/>
+                                <input value={context.user.last_name} onChange={context.handleUserDetailsChange} name="last_name" placeholder='Last Name' type="text" required/>
+
                                 <label htmlFor="email">Email:</label>
-                                <input value={context.user.email} onChange={context.handleUserDetailsChange} name="email" placeholder='email' type="email" required/>
-                                <label htmlFor="password">Password:</label>
+                                <input value={context.user.email} onChange={context.handleUserDetailsChange} name="email" placeholder='email' type="Email" required/>
+
+                                <label htmlFor="Password">Password:</label>
                                 <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder='password' required/>
+
                                 <div className="registration_form_btn_container">
                                 <input className='registration_form_btn' type="submit" value="Sign Up"/>
                                 </div>

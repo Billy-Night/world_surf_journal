@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // import star from '../assets/star.png';
 import './ExpandedTripCard.css';
 import clock from '../assets/clock.png';
+import { ReactComponent as DeleteBin } from '../assets/DeleteBin.svg';
 
 const ExpandedTripCard = (props) => {
     const context = useContext(MyContext);
@@ -18,9 +19,31 @@ const ExpandedTripCard = (props) => {
         navigate('/surf/journal');
     }
 
+
+    const handleCardDelete = () => {
+        console.log('clicked');
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trip/log/delete/${context.selectedTripId}`, {
+            method: 'DELETE',
+        })
+        .then((res) => {
+            if (res.status === 204) {
+                console.log("There was an error deleting the trip");
+                context.setSelectedTripId(null);
+            } else {
+                console.log("Trip was deleted successfully");
+
+                navigate('/surf/journal');
+            }
+        });
+    };
+
     return (
         <div className="individual_expanded_trip_card">
-            <h2>{props.trip.title}</h2>
+            <div className="indiv_ex_trip_crd_title">
+                <h2>{props.trip.title}</h2>
+                
+                <DeleteBin className='indiv_ex_trip_crd_bin' onClick={handleCardDelete}/>
+            </div>
             <div className="individual_expanded_trip_card_img_container">
             <img  src={props.trip.image} alt="surf"/>
             </div>
@@ -67,7 +90,7 @@ const ExpandedTripCard = (props) => {
                 </div>
             </div>
             <div className="individual_expanded_trip_card_btn_container">
-                <button onClick={props.action} className="individual_expanded_trip_card_btn">View More</button>
+                <button onClick={props.action} className="individual_expanded_trip_card_btn">All Trips</button>
                 <button className="individual_expanded_trip_card_btn" onClick={handleClickExpandedCardEdit}>Edit Me</button>
             </div>
         </div>

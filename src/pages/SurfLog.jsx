@@ -13,8 +13,6 @@ const SurfLog = () => {
     
     let [ trips, setTrips ] = useState();
 
-    // let [ selectedTripId, setSelectedTripId ] = useState();
-    let [ selectedTripIndex, setSelectedTripIndex ] = useState();
     let [ showExpandedCard, setShowExpandedCard ]= useState(false);
 
     let id = context.userId;
@@ -29,11 +27,15 @@ const SurfLog = () => {
     }, [id]);
 
     const handleClickViewMoreTripSelected = (id) => {
-        // console.log(id);
-        // setSelectedTripId(id);
+        console.log(id);
+        if (typeof id === "number" ){
+            context.setSelectedTripId(id);
+        } else {
+            console.error("There was an issue with the finding the id of this trip");
+        }
         let index = trips.findIndex((e) => e.id === id);
         // console.log(index);
-        setSelectedTripIndex(index);
+        context.setSelectedTripIndex(index);
         setShowExpandedCard(!showExpandedCard);
     } 
 
@@ -47,7 +49,7 @@ const SurfLog = () => {
             <div className='log_page_container'>
                 {trips ? showExpandedCard ?
                 <>
-                <ExpandedTripCard trip={trips[selectedTripIndex]} action={handleClickFromExpandedCard}/>
+                <ExpandedTripCard trip={trips[context.selectedTripIndex]} action={handleClickFromExpandedCard}/>
                 </>
                 :
                 <>

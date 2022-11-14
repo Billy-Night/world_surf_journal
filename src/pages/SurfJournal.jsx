@@ -93,20 +93,25 @@ const SurfJournal = () => {
                         <form onSubmit={context.updateTrip ? handleSubmitJournalUpdate : handleSubmitJournal}>
                         <section className="section1">
                             <label htmlFor="title">Title:</label>
-                            <input value={context.tripLog.title} onChange={context.handleTripLogChange} name="title" placeholder='Add title here' />
+                            <input value={context.tripLog.title} onChange={context.handleTripLogChange} name="title" placeholder='Add title here' type="text" />
+
                             <label htmlFor="image">Image:</label>
                             <input value={context.tripLog.image} onChange={context.handleTripLogChange} name="image" placeholder="Add image URL" />
+
                             <label htmlFor="where">Where:</label>
                             <input value={context.tripLog.where} onChange={context.handleTripLogChange} name="where" placeholder="Where did you go?" />
+
                             <label htmlFor="when">When:</label>
-                            <input value={context.tripLog.when} onChange={context.handleTripLogChange} name="when" placeholder="When did you go?" />
+                            <input value={context.tripLog.when} onChange={context.handleTripLogChange} name="when" placeholder="When did you go? YYYY-MM-DD" type="date"  />
+
                             <label htmlFor="who">Who:</label>
-                            <input value={context.tripLog.who} onChange={context.handleTripLogChange} name="who" placeholder="Who went?" />
+                            <input value={context.tripLog.who} onChange={context.handleTripLogChange} name="who" placeholder="Who went?" type="text" />
+
                             <label htmlFor="how">How:</label>
-                            <input value={context.tripLog.how} onChange={context.handleTripLogChange} name="how" placeholder="How did you get there?" />
+                            <input value={context.tripLog.how} onChange={context.handleTripLogChange} name="how" placeholder="How did you get there?" type="text"/>
                     
                             <label htmlFor="notes">Notes:</label>
-                            <input value={context.tripLog.notes} onChange={context.handleTripLogChange} name="notes" placeholder="Anything worth remembering?" />
+                            <input value={context.tripLog.notes} onChange={context.handleTripLogChange} name="notes" placeholder="Anything worth remembering?" type="text"/>
 
                             <label htmlFor="gear">Gear:</label>
                             <input value={context.tripLog.gear} onChange={context.handleTripLogChange} name="gear" placeholder="What equipment did you use?" />
@@ -120,7 +125,7 @@ const SurfJournal = () => {
                         </section>
                         <section className="section1">
                             <label htmlFor="duration">Duration:</label>
-                            <input value={context.tripLog.duration} onChange={context.handleTripLogChange} name="duration" placeholder="Duration (m)" />
+                            <input value={context.tripLog.duration} onChange={context.handleTripLogChange} name="duration" placeholder="Duration (m)" type="number"/>
                         </section>    
                             <p>Rating:</p>
                             <div className='sj_inner_rating_container'>
