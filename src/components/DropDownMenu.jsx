@@ -13,6 +13,10 @@ const DropDownMenu = () => {
         context.setUserId(null);
    }
 
+   const handleTripsClick = () => {
+    context.TripsApiCall();
+   }
+
     return (
         <div className='drop_down_menu_inner_container'>
             <ul>
@@ -21,7 +25,7 @@ const DropDownMenu = () => {
                 {isDesktop ? null :
                         <>
                         <li><Link to='/surf/journal'>Journal</Link></li>
-                        <li><Link to='/surf/log'>Trips</Link></li>
+                        <li onClick={handleTripsClick}><Link to='/surf/log'>Trips</Link></li>
                         </> 
                 }
             </ul>

@@ -16,6 +16,7 @@ const ExpandedTripCard = (props) => {
         context.setTripLog({...props.trip});
         context.setUpdatetrip(!context.updateTrip);
         console.log(props.trip);
+        context.setShowExpandedCard(!context.showExpandedCard);
         navigate('/surf/journal');
     }
 
