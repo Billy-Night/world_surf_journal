@@ -31,8 +31,8 @@ const ExpandedTripCard = (props) => {
                 context.setSelectedTripId(null);
             } else {
                 console.log("Trip was deleted successfully");
-
-                navigate('/surf/journal');
+                context.TripsApiCall();
+                context.setShowExpandedCard(!context.showExpandedCard);
             }
         });
     };

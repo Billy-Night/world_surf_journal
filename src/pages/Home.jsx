@@ -1,10 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import './Home.css';
 
-// import logo1 from '../assets/logo1.png'
-
-// import NavBar from "../components/NavBar";
-
 const Home = () => {
     const navigate = useNavigate();
 

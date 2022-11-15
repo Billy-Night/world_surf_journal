@@ -11,7 +11,7 @@ const Settings = () => {
     return (
         <div>
             <NavBar />
-            <p>This is the settings page</p>
+            <p>This is the settings page, which will be updated soon!</p>
             <button onClick={handleSaveSettings}>Save</button>
         </div>
     )

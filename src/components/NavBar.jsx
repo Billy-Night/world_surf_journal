@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { MyContext } from '../context/MyProvider';
 import { Link, useNavigate } from 'react-router-dom';
-// import { MyContext } from '../context/MyProvider';
+
 import DropDownMenu from './DropDownMenu';
 import './NavBar.css';
 import avatar from '../assets/avatar.png';
@@ -8,7 +9,7 @@ import avatar from '../assets/avatar.png';
 import useMediaQuery from "../hooks/useMediaQuery.jsx";
 
 const NavBar = () => {
-    // const context = useContext(MyContext);
+    const context = useContext(MyContext);
     const isDesktop = useMediaQuery('(min-width: 960px)');
     const navigate = useNavigate();
 
@@ -22,6 +23,10 @@ const NavBar = () => {
         navigate('/');
     }
 
+    const handleLogClick = () => {
+        context.TripsApiCall();
+    }
+
     return (
         <div className="navbar_container">
             <div className="top_navbar_container">
@@ -30,7 +35,7 @@ const NavBar = () => {
                         {isDesktop ?
                         <>
                         <li><Link to='/surf/journal'>Journal</Link></li>
-                        <li><Link to='/surf/log'>Trips</Link></li>
+                        <li onClick={handleLogClick}><Link to='/surf/log'>Trips</Link></li>
                         </> 
                         : null }
                         <img onClick={handleDropDownMenu} src={avatar} alt="avatar"/>

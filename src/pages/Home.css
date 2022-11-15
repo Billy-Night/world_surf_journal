@@ -13,11 +13,11 @@
 .home_image_container {
     margin-top: 8%;
     background-image:
-       url('../assets/siteLogo.svg');
-       background-repeat: no-repeat;
-       background-size: contain;
-       height: 400px;
-       width: 200px;
+    url('../assets/siteLogo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 200px;
 }
 
 .home_details_container {

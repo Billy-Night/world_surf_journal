@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import './Login.css';
 import useMediaQuery from "../hooks/useMediaQuery.jsx";
 
+
 const Login = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
@@ -47,7 +48,7 @@ const Login = () => {
             context.setUserId(data.id);
             setErrorPassword(false);
             navigate('/surf/journal');
-        });
+        })
     };
 
     return (
@@ -80,7 +81,7 @@ const Login = () => {
                         </> : null }
                     </div>
                 </div>
-              </div> 
+            </div> 
         </div>
     )
 }

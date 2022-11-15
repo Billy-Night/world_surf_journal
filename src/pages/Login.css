@@ -6,14 +6,14 @@
         115deg,
         rgba(99, 116, 138, 0.5),
         rgba(64, 75, 89, 0.4)
-      ),
-       url('../assets/barrel.jpeg');
+    ),
+    url('../assets/barrel.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     margin: 0px;
     height: 110vh;
-  }
+}
 
 .space {
     height: 10%;
