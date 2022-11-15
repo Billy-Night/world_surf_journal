@@ -51,7 +51,7 @@ const Registration = () => {
                                 <input value={context.user.email} onChange={context.handleUserDetailsChange} name="email" placeholder='email' type="Email" required/>
 
                                 <label htmlFor="Password">Password:</label>
-                                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder='password' required/>
+                                <input value={context.user.password} onChange={context.handleUserDetailsChange} name="password" placeholder='password' type="password" required/>
 
                                 <div className="registration_form_btn_container">
                                 <input className='registration_form_btn' type="submit" value="Sign Up"/>
