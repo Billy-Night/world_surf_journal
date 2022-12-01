@@ -37,6 +37,7 @@ Some of the main features of this project are:
  - The ability for the user to view all their trips in an easy accessible dashboard.
  - The ability to expand each trip within the dashboard and view extra information about their trip.
  - The ability for the user to edit a trip.
+ - The ability for the user to delete their trips.
 
 ## Project Status 
 The project was completed and handed in within the time frame allocated by the school, the project meet all requested requirements.
@@ -47,7 +48,6 @@ I would like to continue working on the project into the future.
 
 ## Future Development
 Some of the main features to add in the future are :
- - The ability for the user to delete their trips.
  - The ability for the user to update their profile.
  - The ability for the user to upload an image to their trip.
  - The ability for the user to view all their trips on a aesthetically pleasing map, with expandable icons etc...
