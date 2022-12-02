@@ -46,26 +46,12 @@ const MyProvider = (props) => {
         user_id: null,
     }
 
-   
-    const TripsApiCall = () => {
-        setTrips([]);
-        if (typeof userId === "number"){
-            fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trips/${userId}`)
-                        .then((res) => res.json())
-                        .then((data) => {
-                            setTrips(data);
-                            console.log("Successful api request for trips");
-
-                        }); 
-        } else {
-            console.log("The user id passed to the api call is not a number");
-        }
-    }
 
     //State 4: Handling all the users trips from the api call
     let [ trips, setTrips ] = useState();
 
-    //State 5: 
+    //State 5: Handles the trip log from the journal:
+    
     let [ tripLog, setTripLog ] = useState(tripLogBlank);
 
     const handleTripLogChange = (event) => {
@@ -78,8 +64,25 @@ const MyProvider = (props) => {
     };
 
     // State 6: Handling trip update 
-    let [ updateTrip, setUpdatetrip ] = useState(false); 
-    
+    let [ updateTrip, setUpdatetrip ] = useState(false);
+
+
+    // This Api call now uses async and await instead of using .then.
+
+    async function TripsApiCall (){
+        setTrips([]);
+        if (typeof userId === "number"){
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trips/${userId}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json(); // Extracting data as a JSON object from the response.
+            setTrips(data);
+        } else {
+            console.log("The user id passed to the api call is not a number");
+        }
+    }
+
     //! State 7: Handling selected trip this is the index used for displaying the trips as cards once the data has been recieved
     let [ selectedTripIndex, setSelectedTripIndex ] = useState();
 
