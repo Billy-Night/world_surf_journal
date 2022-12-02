@@ -14,7 +14,7 @@ const DropDownMenu = () => {
    }
 
    const handleTripsClick = () => {
-    context.TripsApiCall();
+    context.tripsApiCall();
    }
 
     return (

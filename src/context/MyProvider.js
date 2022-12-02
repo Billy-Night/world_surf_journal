@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { apiCallForTrips } from '../utils/apiCalls.jsx';
+
 
 export const MyContext = React.createContext();
+
+
 
 const MyProvider = (props) => {
 
@@ -66,23 +70,6 @@ const MyProvider = (props) => {
     // State 6: Handling trip update 
     let [ updateTrip, setUpdatetrip ] = useState(false);
 
-
-    // This Api call now uses async and await instead of using .then.
-
-    async function TripsApiCall (){
-        setTrips([]);
-        if (typeof userId === "number"){
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/trips/${userId}`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json(); // Extracting data as a JSON object from the response.
-            setTrips(data);
-        } else {
-            console.log("The user id passed to the api call is not a number");
-        }
-    }
-
     //! State 7: Handling selected trip this is the index used for displaying the trips as cards once the data has been recieved
     let [ selectedTripIndex, setSelectedTripIndex ] = useState();
 
@@ -91,6 +78,18 @@ const MyProvider = (props) => {
    
     //State 9: Handle show expanded
     let [ showExpandedCard, setShowExpandedCard ]= useState(false);
+
+    // Api call for trips this uses the a utility function to make the call, found under utils.
+     async function tripsApiCall (){
+        if (typeof userId === "number"){
+            const url = `${process.env.REACT_APP_BACKEND_URL}/api/trips/${userId}`;
+            setTrips([]);
+            const data = await apiCallForTrips(url);
+            setTrips(data);
+        } else {
+            console.log("The user id passed into the api call is not a number");
+        }
+    }
 
     return (
         <MyContext.Provider 
@@ -104,7 +103,7 @@ const MyProvider = (props) => {
                 setUserId: setUserId,
                 userId: userId,
                 setTripLog: setTripLog,
-                TripsApiCall: TripsApiCall,
+                tripsApiCall: tripsApiCall,
                 setTrips: setTrips,
                 trips: trips,
                 tripLog: tripLog,

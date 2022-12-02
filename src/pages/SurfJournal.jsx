@@ -42,7 +42,7 @@ const SurfJournal = () => {
             } else {
                 console.log("Trip was added successfully");
                 context.setTripLog(context.tripLogBlank);
-                context.TripsApiCall();
+                context.tripsApiCall();
                 navigate('/surf/log');
             }
         });
@@ -78,7 +78,7 @@ const SurfJournal = () => {
                 console.log("Trip was added successfully");
                 context.setTripLog(context.tripLogBlank);
                 context.setUpdatetrip(!context.updateTrip);
-                context.TripsApiCall();
+                context.tripsApiCall();
                 navigate('/surf/log');
             }
         })

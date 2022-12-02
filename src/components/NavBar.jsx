@@ -24,7 +24,7 @@ const NavBar = () => {
     }
 
     const handleLogClick = () => {
-        context.TripsApiCall();
+        context.tripsApiCall();
     }
 
     return (

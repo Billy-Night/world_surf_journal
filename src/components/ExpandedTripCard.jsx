@@ -32,7 +32,7 @@ const ExpandedTripCard = (props) => {
                 context.setSelectedTripId(null);
             } else {
                 console.log("Trip was deleted successfully");
-                context.TripsApiCall();
+                context.tripsApiCall();
                 context.setShowExpandedCard(!context.showExpandedCard);
             }
         });
