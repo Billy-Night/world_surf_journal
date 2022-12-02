@@ -1,5 +1,6 @@
 
 .sj_main {
+    box-sizing: border-box; 
     background-image:
         linear-gradient(
         115deg,
@@ -7,11 +8,11 @@
         rgba(64, 75, 89, 0.4)
       ),
        url('https://images.unsplash.com/photo-1571690584414-fa2a1127a2e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    margin: 0px;
-    height: 160vh;
+       background-repeat: no-repeat;
+       background-size: cover;
+       color: white;
+       /* margin: 0px; */
+       height: fit-content;
   }
 
 .sj_form_container_ {
@@ -19,8 +20,7 @@
 }
 
 .sj_form_container_desk {
-    margin: auto 20% auto 20%;
-    margin-top: 4%;
+    margin: 4% 20% auto 20%;
     padding: 4px;
     border: solid 1px #053057;
     border-radius: 20px;
@@ -28,8 +28,7 @@
 }
 
 .sj_form_container_mobile {
-    margin: auto 10% auto 10%;
-    margin-top: 4%;
+    margin: 4% 10% auto 10%;
     padding: 4px;
     border: solid 1px #053057;
     border-radius: 20px;
