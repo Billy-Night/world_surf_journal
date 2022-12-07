@@ -95,7 +95,7 @@ const SurfJournal = () => {
                         <form onSubmit={context.updateTrip ? handleSubmitJournalUpdate : handleSubmitJournal}>
                         <section className="section1">
                             <label htmlFor="title">Title:</label>
-                            <input value={context.tripLog.title} onChange={context.handleTripLogChange} name="title" placeholder='Add title here' type="text" maxlength="12" required />
+                            <input value={context.tripLog.title} onChange={context.handleTripLogChange} name="title" placeholder='Add title here' type="text" maxLength="12" required />
 
                             <label htmlFor="image">Image:</label>
                             <input value={context.tripLog.image} onChange={context.handleTripLogChange} name="image" placeholder="Add image URL" />

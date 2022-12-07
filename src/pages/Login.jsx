@@ -11,6 +11,8 @@ const Login = () => {
     const context = useContext(MyContext);
     const isDesktop = useMediaQuery('(min-width: 960px)');
 
+    let [ serverError, setServerError ] = useState(false);
+
     let [ errorPassword, setErrorPassword ] =  useState(false);
     let [ errorEmail, setErrorEmail ] = useState(false);
 
@@ -21,6 +23,7 @@ const Login = () => {
 
     const handleLogInSubmit = (event) => {
         event.preventDefault();
+        try {
         fetch(`${process.env.REACT_APP_BACKEND_URL}/api/log-in`, {
             method: "POST",
             headers: new Headers({
@@ -32,11 +35,13 @@ const Login = () => {
             }),
         }).then((res) => {
             if (res.status === 404) {
+                setServerError(true);
+                console.log("There is a server issue maybe the API url is wrong")
+            } else if (res.status === 401) {
                 context.setUser(context.userBlank);
                 console.log("There was a problem logging in FE EMAIL!");
                 setErrorEmail(true);
-            }
-            if (res.status === 500) {
+            } else if (res.status === 500) {
                 context.setUser(context.userBlank);
                 console.log("There was a problem logging in FE PASSWORD!");
                 setErrorPassword(true);
@@ -49,6 +54,9 @@ const Login = () => {
             setErrorPassword(false);
             navigate('/surf/journal');
         })
+        } catch (error) {
+            console.log("There was an error from the try catch");
+    }
     };
 
     return (
@@ -79,6 +87,11 @@ const Login = () => {
                         <> 
                             <p>WRONG PASSWORD</p>
                         </> : null }
+                        {serverError ? 
+                        <>
+                            <p>There is a potential server issue</p>
+                        </> : null
+                        }
                     </div>
                 </div>
             </div> 
