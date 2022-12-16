@@ -28,6 +28,7 @@ const Login = () => {
             method: "POST",
             headers: new Headers({
                 'Content-Type' : 'application/json',
+                'Access-Control-Allow-Origin': 'no-cors',
             }),
             body: JSON.stringify({
                 email: context.user.email,
