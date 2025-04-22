@@ -25,9 +25,9 @@ const Login = () => {
     try {
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/log-in`, {
         method: "POST",
-        headers: new Headers({
+        headers: {
           "Content-Type": "application/json",
-        }),
+        },
         body: JSON.stringify({
           email: context.user.email,
           password: context.user.password,
