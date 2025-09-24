@@ -7,7 +7,7 @@
  *Save your next surf adventure...*
  
  <p align="center">
-  <a href="https://word-surf-journal-frontend.herokuapp.com/">Demo</a> . 
+  <a href="https://worldsurfjournal-production-91bf.up.railway.app/">Demo</a> . 
   <a href="https://github.com/Billy-Night/world_surf_journal/issues">Report Bug</a>
  </p>
 
